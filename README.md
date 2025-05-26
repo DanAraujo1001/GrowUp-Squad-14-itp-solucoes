@@ -8,7 +8,6 @@ Este projeto foi desenvolvido pela **Squad 14** durante o programa **GrowUp**, c
 
 | Pasta / Arquivo       | Descrição                                                                 |
 |------------------------|---------------------------------------------------------------------------|
-| `codigo-norte/`        | Contém *[descrição do conteúdo da pasta — você pode detalhar aqui]*       |
 | `public/`              | Arquivos públicos acessíveis diretamente, como imagens e `index.html`     |
 | `src/server/`          | Código-fonte do servidor, incluindo rotas e lógica de backend             |
 | `package.json`         | Gerenciador de dependências e scripts do projeto                          |
