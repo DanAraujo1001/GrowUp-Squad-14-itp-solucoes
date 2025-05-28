@@ -1,6 +1,6 @@
 # 🧠 GrowUp Squad 14 – ITP Soluções
 
-Este projeto foi desenvolvido pela **Squad 14** durante o programa **GrowUp**, com foco em soluções inovadoras no contexto de **ITP (Informações Técnicas de Produto)**.
+Este projeto foi desenvolvido pela **Squad 14** durante o programa **GrowUp**, com foco em soluções inovadoras para a ITP soluções.
 
 ---
 
