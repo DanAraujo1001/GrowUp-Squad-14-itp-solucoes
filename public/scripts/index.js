@@ -3,7 +3,8 @@ import { createBarChart } from './charts/BarChart.js';
 import { createLineChart } from './charts/LineChart.js';
 import { createPieChart } from './charts/PieChart.js'
 import { createDonutChart } from './charts/DonutChart.js';
-import { frequenciaClientes, prepareNotaData, preparePrioridadeData, createDataTable } from './manipulaDados.js';
+import { createHorizontalBarChart } from './charts/HorizontalBarChart.js';
+import { frequenciaClientes, prepareNotaData, preparePrioridadeData, createDataTable, prepareServicoPopularidadeDa } from './manipulaDados.js';
 
 
 // >>>CRIANDO OS GRÁFICOS<<<
@@ -26,6 +27,17 @@ async function initDashboard() {
     const columnsLineChart = ["Clients", "Priority",];
 
     createLineChart("preparePrioridadeData", "Prioridade de Atendimento", columnsLineChart, datasLineChart);
+
+    const datasServicosPopularidade = prepareServicoPopularidadeData(); 
+    const columnsServicosPopularidade = ["Serviço", "Quantidade"]; 
+    if (datasServicosPopularidade && datasServicosPopularidade.length > 0) {
+        createHorizontalBarChart(
+            "servicosChart", 
+            "Serviços Mais Utilizados", 
+            columnsServicosPopularidade,
+            datasServicosPopularidade
+        );
+    }  
 
 }
 
