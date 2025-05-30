@@ -39,7 +39,16 @@ export function preparePrioridadeData() {
     const datas = Object.entries(prioridades);
     return datas;
 }
+export function prepareServicoPopularidadeData() {
+    if (!dados || dados.length === 0) return []; 
 
+    const servicosContagem = dados.reduce((acc, item) => {
+        acc[item.servico] = (acc[item.servico] || 0) + 1;
+        return acc;
+    }, {});
+    const datas = Object.entries(servicosContagem).sort((a, b) => a[1] - b[1]); //ordenar no formato ascedente (maior no topo)
+    return datas; 
+}
 
 export function createDataTable(){
     try {
