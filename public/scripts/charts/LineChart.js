@@ -1,7 +1,7 @@
-export function createHorizontalBarChart(elementId, chartTitle, columns, chartData) {
+export function createLineChart(elementId, chartTitle, columns, chartData) {
     const chartElement = document.getElementById(elementId);
     if (!chartElement) {
-        console.error(`[createHorizontalBarChart] Elemento HTML com ID '${elementId}' não encontrado.`);
+        console.error(`[createLineChart] Elemento HTML com ID '${elementId}' não encontrado.`);
         return null;
     }
     const chart = echarts.init(chartElement);
@@ -10,42 +10,53 @@ export function createHorizontalBarChart(elementId, chartTitle, columns, chartDa
         title: {
             text: chartTitle,
             left: "center",
-            textStyle: { fontSize: 18, fontWeight: 'bold' },
+            textStyle: {
+                fontSize: 18,
+                fontWeight: 'bold',
+            },
         },
         tooltip: {
-            trigger: "axis",
-            axisPointer: { type: "shadow" },
+            trigger: 'axis' 
+        },
+        legend: { // Adicionar legenda se houver múltiplas séries
+            data: columns && columns.length > 1 ? columns.slice(1) : [],
+            bottom: 10, // Posição da legenda
+            type: 'scroll' // Permite scroll se muitos itens na legenda
         },
         grid: {
             left: '3%',
             right: '4%',
-            bottom: '3%',
-            containLabel: true 
+            bottom: '15%', // Espaço para labels do eixo X e legenda
+            containLabel: true
         },
-        xAxis: { 
-            type: "value",
-            name: columns && columns.length > 1 ? columns[1] : 'Valor', 
-            boundaryGap: [0, 0.01]
-        },
-        yAxis: { // Eixo Y agora é o de categoria
+        xAxis: {
             type: "category",
-            data: chartData.map((item) => item[0]), // Nomes dos serviços/categorias
+            boundaryGap: false, 
+            data: chartData.map((item) => item[0]), 
             axisLabel: {
-                interval: 0, // Mostrar todos os labels
-                fontSize: 12
+                rotate: 45,
+                interval: 0,
+                textStyle: {
+                    fontSize: 12, 
+                }
             }
         },
-        series: [ 
-            {
-                name: columns && columns.length > 1 ? columns[1] : (columns && columns.length === 1 ? columns[0] : chartTitle), 
-                type: "bar",
-                barWidth: '60%',
-                data: chartData.map((item) => item[1]), 
-                label: { show: true, position: "right" },
-            }
-        ]
+        yAxis: {
+            type: "value",
+            name: "Valores" 
+        },
+        series: (columns && columns.length > 1 ? columns.slice(1) : [''])
+            .map((columnName, index) => ({
+                name: columnName || (columns && columns.length === 1 ? columns[0] : chartTitle), // Nome da série
+                type: "line",
+                smooth: true, 
+                data: chartData.map((item) => item[index + 1]), 
+                label: { show: false, position: "top" }, 
+                
+        })),
     };
 
     chart.setOption(options);
+
     return chart; 
 }
