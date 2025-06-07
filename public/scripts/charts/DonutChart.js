@@ -20,9 +20,9 @@ export function createDonutChart(elementId, chartTitle, columns, chartData) {
             formatter: '{a} <br/>{b}: {c} ({d}%)'
         },
         legend: {
-            orient: 'vertical',
-            right: 10,
-            top: 'center',
+            orient: "vertical",
+            right: 0,
+            bottom: 0,
             type: 'scroll' 
         },
         series: [

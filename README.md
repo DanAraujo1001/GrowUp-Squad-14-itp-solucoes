@@ -1,44 +1,31 @@
-# 🧠 GrowUp Squad 14 – ITP Soluções
+# 📊 GrowUp 2025-1 - Squad 14
 
-Este projeto foi desenvolvido pela **Squad 14** durante o programa **GrowUp**, com foco em soluções inovadoras para a ITP soluções.
+## 🧠 Sobre o Projeto
+    O projeto desenvolvido diz respeito a um dashboard construído com a utilização da biblioteca Apache Echarts e outras tecnologias como Datatables.
+    Tendo em vista que o intuito proposto se relaciona com a montagem de um sistema que consegue tornar os dados mais acessíveis, fáceis de visualizar e interagir,
+    a implementação foi feita através da linguagem de programação JavaScript, tendo como objetivo obter uma interface simples que filtre e analise os dados.
+➡️ [Clique aqui para começar a usar](./docs/GETSTARTED.md)
 
----
+## 📌 Origem do Desafio
+    Este projeto foi proposto como parte de um desafio dentro da disciplina Residência de Software 2, com foco na construção de dashboards utilizando JavaScript, ECharts e Datatable.
+    Desse modo, a ideia surgiu a partir da necessidade da empresa ITP Soluções de possuir uma ferramenta visual de fácil integração para conseguir analisar os dados da instituição de forma dinâmica, precisa e simples.
 
-## 📁 Estrutura do Projeto
+## 🧰 Stack de Desenvolvimento
+- 🟨 JavaScript (ES6 Modules)
+- 📊 ECharts
+- 🟩 Node.js + Express
+- 🗂 Estrutura modular com `/public` e `/src`
+- 📈 Datatable
 
-| Pasta / Arquivo       | Descrição                                                                 |
-|------------------------|---------------------------------------------------------------------------|
-| `public/`              | Arquivos públicos acessíveis diretamente, como imagens e `index.html`     |
-| `src/server/`          | Código-fonte do servidor, incluindo rotas e lógica de backend             |
-| `package.json`         | Gerenciador de dependências e scripts do projeto                          |
-| `.gitignore`           | Lista de arquivos e pastas ignorados pelo Git                             |
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-- **JavaScript** – 90.2%
-- **HTML** – 5.4%
-- **CSS** – 4.4%
-
----
-
-## 👥 Contribuidores
-
-A Squad 14 é formada por:
-
-- Lucas Brandi  
-- Lavínia Mota  
-- Danilo Araujo  
-- Eduardo Leandro  
-- Inácio de Oliveira  
-- Rayelen Oliveira  
-- João Vitor  
-- Vinícius Maltas  
-- Caio Rafael  
-- Nicolas Gabriel  
-- Felipe Nobre  
+## 👥 Integrantes
+- Caio Rafael
+- Danilo Araujo
+- Felipe Nobre
 - Guilherme Guimarães
-
----
-
+- Inácio Barreto
+- João Vitor 
+- Lavínia Mota
+- Lucas Dantas
+- Nicolas Gabriel
+- Vinícius Maltas Pimentel
+- Rayelen Oliveira
